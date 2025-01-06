@@ -254,11 +254,9 @@ export async function scanReceipt(file) {
         merchantName: data.merchantName,
       };
     } catch (parseError) {
-      console.error("Error parsing JSON response:", parseError);
       throw new Error("Invalid response format from Gemini");
     }
   } catch (error) {
-    console.error("Error scanning receipt:", error);
     throw new Error("Failed to scan receipt");
   }
 }
